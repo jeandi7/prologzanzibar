@@ -1,7 +1,7 @@
 # Google Zanzibar Access Management  language-like with Golang + Prolog in less than 150 lines of code
 
 Zanzibar handles authorization for YouTube, Drive, Google Cloud and all of Google's other products.
-Zanzibar is a globally distributed authorization system capable of processing million of client queries per second
+Zanzibar is a globally distributed authorization system capable of processing million of client queries per second.
 
 See (_later_) zanzibar : Google's Consistent, Global Authorization System
 https://storage.googleapis.com/pub-tools-public-publication-data/pdf/0749e1e54ded70f54e1f646cd440a5a523c69164.pdf
@@ -10,22 +10,22 @@ At first glance Google's paper is not easy to read, i had to read the paper many
 
 Fortunately this paper was annotated by the authzed company (https://zanzibar.tech/) which provides an implementation (https://authzed.com/spicedb) developed in Go.
 
-There are today several access management solutions  that are inspired by zanzibar (zanzibar is exclusively used by Google)
+There are today several access management solutions  that are inspired by zanzibar (zanzibar is exclusively used by Google).
 
 Most zanzibar-like solutions are developed in Golang (zanzibar included) and sometimes in Rust.
 
-The code provided here is a didactic example based on Role-based Access Control (RBAC) to understand the spirit of the zanzibar language
+The code provided here is a didactic example based on Role-based Access Control (RBAC) to understand the spirit of the zanzibar language.
 
 > The difficulty of implementing a solution like zanzibar is not in the language but lies in the execution of Prolog-type queries on a distributed architecture.
-> We have to make sure that the rules are up to date everywhere in the nodes of the network
-> But that's another story that google names the "new enemy problem"
+> We have to make sure that the rules are up to date everywhere in the nodes of the network.
+> But that's another story that google names the "new enemy problem".
 
 # Prolog
 
 When I read the google paper I immediately thought of prolog. Alain Colmerauer created prolog in 1972 in Marseille.
 (I was born in Marseille and I discovered prolog there)
 
-Prolog is a declarative programming language designed for developing logic-based AI application
+Prolog is a declarative programming language designed for developing logic-based AI application.
 
 For this example I found the Ichiban Prolog library developed in Go.
 
@@ -41,7 +41,7 @@ For this example I found the Ichiban Prolog library developed in Go.
 >
 > writer(X,Y) :- relation(X,writer,Y).
 
-- Edit indicates that the user has permission to edit the resource document 
+- Edit indicates that the user has permission to edit the resource document. 
 - View indicates that the user has permission to view the resource document, if they are a reader OR have edit permission.
 - OR is noted ';' in prolog
 
@@ -51,7 +51,7 @@ For this example I found the Ichiban Prolog library developed in Go.
 > 
 > view(X,Y) :- reader(X,Y) ; edit(X,Y). 
 
-> RBAC Model becames set of rules in Prolog and is a set of relations in Zanzibar
+> RBAC Model becames set of rules in Prolog and is a set of relations in Zanzibar.
 
 
 # Data example in Zanzibar format 
@@ -73,6 +73,7 @@ A simplified Extented BNF grammar of tuples can be written as follows :
 > object ::= namespace ":" object_id
 >
 > user  ::= namespace ":" user_id 
+>
 > ...
 
 To simplify, I don't include the ':' separation between the object type and the identifier
