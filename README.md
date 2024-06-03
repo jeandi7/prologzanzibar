@@ -80,7 +80,7 @@ To simplify, I don't include the ':' separation between the object type and the 
 
 ![image info](dataTuples.png)
 
-You have to get used to reading from right to left the resource:id#relation@user:id
+You have to get used to reading from right to left the object:id#relation@user:id
 
 
 > Tuples in Zanzibar became Prolog facts
