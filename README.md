@@ -130,10 +130,10 @@ That's all.
 
 If i had to summarize for the zanzibar queries:
 
-| Zanzibar             |  query| response at least | compute the response|
-|----------------------|-------|----------|---------|
+| Zanzibar             |  query  | response at least | compute the response|
+|----------------------|---------|----------|---------|
 | Evaluate             | is _user_ allowed to _permission_ _object_ ? | yes/no | easy  |
-| Expand               |   who can _permission_ _object_    |   a list |  difficult   |
+| Expand               |   who can _permission_ _object_  ? |   a list |  difficult   |
 | Reverse Index Expand |   what can _user_ do ?       |    a list| difficult |
 
 
