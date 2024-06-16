@@ -137,6 +137,10 @@ If i had to summarize for the zanzibar queries:
 | Expand               |   who can _permission_ _object_  ? |   a list |  difficult   |
 | Reverse Index Expand |   what can _user_ do ?       |    a list| difficult |
 
+
+source : https://docs.google.com/document/d/1KbJ8Gc65mTkSQXFqBalbiCbGuQClTQDRmKCg1BExAN4/edit
+(Lea Kessner)
+
 # Run
 
 Under prologzanzibar tape go run main.go
